@@ -61,13 +61,17 @@ struct MAP {
     int Map[MAXN][MAXM], Color[11] ;
     
     inline void FALL() {
-        for (int i = 2 ; i <= 5 ; i ++)
-        for (int j = 2 ; j <= 7 ; j ++)
-        if (Map[i][j] && ! Map[i][j - 1]) {
-            int Now = j ;
-            while(Now > 0 && ! Map[i][Now - 1]) Now -- ;
-            swap(Map[i][j], Map[i][Now]) ;
-        }
+        int Pass[50], Top ;
+        for (int i = 1 ; i <= 5 ; i ++){
+        	Top = 0 ; 
+        	for (int j = 1 ; j <= 7 ; j ++)
+    			if (Map[i][j]){
+    				Pass[++ Top] = Map[i][j] ;
+    				Map[i][j] = 0 ;
+				}
+			for (int j = 1 ; j <= Top ; j ++)
+				Map[i][j] = Pass[j] ;
+		}	return ;
     }
 
     inline void DIE() {
@@ -125,11 +129,12 @@ struct MAP {
 
 void Search(int Now) 
 {
+	if(E.NEVER()) return ;
 	if(N == Now) {
 		if(E.JUDGE()) E.PUT() ; 
 		else return ;
 	}
-    if(E.NEVER()) return ;
+    
     MAP Pass = E ;
     printf("%d\n",Now);
     for (int i = 1 ; i <= 5 ; i ++)
@@ -161,7 +166,7 @@ int main() {
             if(E.Map[i][j] == 0) break ;
             E.Color[E.Map[i][j]] ++ ;
         }
-    E.DIE() ; 
+    E.DIE() ;
 	Search(0) ;
     printf("-1") ;
 	return 0 ;
