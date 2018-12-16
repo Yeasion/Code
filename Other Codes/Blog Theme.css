@@ -1,0 +1,463 @@
+@charset "UTF-8";
+/*
+ * ============English============
+ *
+ * License(ONLY this file):WTFPL(//www.wtfpl.net/)
+ *
+ * Update Date:2014-10-12
+ *
+ * Author:Frantic1048
+ *
+ * Announcement:I DO NOT OWN the pictures used in the Credits!
+ *
+ * Credits:
+ *      Commontbox background:Mao Amatsuka by Scriptedillusion(//scriptedillusion.deviantart.com)
+ *      post_body background:Senri Akane by Zaydo(//zaydo.deviantart.com)
+ *
+ * How To Use:
+ *      This style effect on "Gertrude Blue" cnblog skin's template.So you should set your skin to "Gertrude Blue" first.
+ *      Copy this CSS file into "Blog Custom CSS" area.
+ *      You can surely disable the template's default CSS.
+ *      You have to set the URL in Line#238 to your own avatar's URL,it affects the avatar in the sidebar.
+ *      Add the line below into "Blog Sidebar" area.
+ *          <div id="sidebar-cus">< div id="cus-avatar"></div></div>
+ *      Add the line below at the end of your blog page for a better experience.Not directly use in this CSS file.
+ *          <style type="text/css">@import url(//fonts.googleapis.com/css?family=Kelly+Slab|Raleway);</style>
+ *      If you want to use page head，follow the strucure below，the second span tag is optional:
+ *          <div id="top-qoute-container">
+ *            <span id="top-qoute-context">It is the path you have chosen. Take pride in it.</span>
+ *            <span id="top-qoute-from">Kotomine Kirei</span>
+ *          </div>
+ *
+ *
+ * ============简体中文============
+ *
+ * 协议(仅此文件):WTFPL(//www.wtfpl.net/)
+ *
+ * 更新日期:2014-10-12
+ *
+ * 作者:Frantic1048
+ *
+ * 声明:特别感谢中提及的作品归原作者所有，我只是个打码的。
+ *
+ * 特别感谢:
+ *      评论框背景:天使真央 by Scriptedillusion(//scriptedillusion.deviantart.com)
+ *      正文背景:千里朱音 by Zaydo(//zaydo.deviantart.com)
+ *
+ * 如何使用:
+ *      这个CSS作用于博客园的"Gertrude Blue"皮肤，你应该先把你的皮肤切换到"Gertrude Blue"。
+ *      把本文件的内容复制到博客设置的自定义CSS区域。
+ *      直接禁用主题自带的CSS。
+ *      把本文件第238行的URL修改成你的头像的URL。此行作用于侧栏头像。
+ *      把下面这行代码添加到博客侧边栏公告区域。
+ *          <div id="sidebar-cus">< div id="cus-avatar"></div></div>
+ *      为了更好的体验，把下面这行添加到博客页脚，不要直接在本文件中应用这行代码。
+ *          <style type="text/css">@import url(//fonts.googleapis.com/css?family=Kelly+Slab|Raleway);</style>
+ *      如果想要使用页首，遵循下面的结构，其中第二个 span 标签是可选的:
+ *          <div id="top-qoute-container">
+ *            <span id="top-qoute-context">It is the path you have chosen. Take pride in it.</span>
+ *            <span id="top-qoute-from">Kotomine Kirei</span>
+ *          </div>
+ */
+
+/*common*/
+
+{-webkit-box-sizing:border-box;box-sizing:border-box;}
+ body{
+  font-family:"Raleway","文泉驿微米黑","思源黑體","Helvetica","sans-serif";
+  background:#ddd;
+  font-size:14px;
+  margin:0;
+  word-wrap:break-word;
+}
+
+input,textarea{
+  background:#444;
+  color:#eee;
+  transition:all ease 0.3s;
+}
+input:hover,textarea:hover{
+  background:#333;
+  box-shadow:inset 0 0 1px transparent,0 0 2px rgb(72,209,204);
+}
+input:focus,textarea:focus{
+  background:black;
+  box-shadow:inset 0 0 3px rgb(72,209,204),0 0 1px rgb(72,209,204);
+}
+::-moz-selection{
+  background:rgba(0,206,209,0.2);
+  color:black;
+}
+::seletcion{
+  background:rgba(0,206,209,0.2);
+  color:black;
+}
+a:link{
+  transition:all ease 0.3s;
+  position:relative;
+  text-decoration:none !important;
+}
+a:hover{
+  padding:0 1em;
+  color:#ccc !important;
+  background:rgba(0,0,0,0.7);
+  font-weight:bold;
+}
+blockquote{
+  font-size:0.8em;
+}
+code{
+  padding:0 0.5em;
+  background:rgba(180,180,180,0.4);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  box-shadow: 0 0 5px rgba(180,180,180,0.7);
+}
+pre{
+  background:rgba(180,180,180,0.4);
+  padding: 1em;
+  box-shadow: 0 0 5px rgba(180,180,180,0.7);
+}
+pre code{
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+}
+/*top area*/
+#top-qoute-container{
+position:relative;
+z-index:9000;
+margin-top:-2em;
+padding:4em 0 1.4em 0;
+text-align:center;
+background:#555;
+font-family:"Kelly Slab";
+font-size:24px;
+color:#eee;
+text-shadow:-1px -2px 1px black;
+transform:skewY(-3deg);
+-webkit-transform:skewY(-3deg);
+box-shadow:0 2px 10px black;
+}
+#top-qoute-context,#top-qoute-from{
+z-index:9100;
+display:inline-block;
+margin:0em 1em;
+transform:skewY(3deg);
+-webkit-transform:skewY(3deg);
+}
+#top-qoute-from:before{
+content:" -- ";
+}
+body>h1:first-of-type {
+    position: sticky;
+    z-index: 8000;
+    margin-top: -3.5em;
+    padding: 3em 0 1em 12em;
+    text-align: center;
+    text-transform: capitalize;
+    background: #333;
+    border: none;
+    box-shadow: 0 7px 13px dimgrey;
+    transform: skewY(3deg);
+    -webkit-transform: skewY(3deg);
+}
+body>h1:first-of-type>a{
+  z-index:8001;
+  font-size:40px;
+  font-family:"Karla";
+  display:block;
+  color:white;
+  background:none;
+  box-shadow:none;
+  padding:0;
+  transform:skewY(-4deg);
+  -webkit-transform:skewY(-4deg);
+}
+/*side area*/
+#rightmenu{
+position:absolute;
+width:250px;
+top:0;
+right:5px;
+z-index:7000;
+margin-top:0;
+padding:26em 0 4em 0;
+color:#ccc;
+background:#222;
+box-shadow:0 2px 2px black;
+transform:skewY(5deg);
+-webkit-transform:skewY(5deg);
+}
+#rightmenu li{list-style:none;}
+#rightmenu ul{padding:6px;}
+#rightmenu>*{transform:skewY(-5deg);-webkit-transform:skewY(-5deg);}
+#rightmenu *{border:none !important;}
+#rightmenu a{color:rgb(135,206,250);}
+#rightmenu a:hover{
+color:white !important;
+background:rgb(135,206,250);
+border-radius:0 0.5em 0.5em 0;
+}
+#rightmenu>h3,.catListTitle,#blog-sidecolumn>h3{
+z-index:7777;
+:block;
+color:white !important;
+margin:1em -3px 1em -1em !important;
+padding:2px 0 2px 4px;
+background:#111 !important;
+box-shadow:0 0 2px black;
+}
+
+.CalTitle{
+  color:white !important;
+  background:#111 !important;
+}
+#blog-calendar a:hover{
+padding:0;
+font-weight:normal;
+background:none;
+text-shadow:1px 1px 5px rgb(255,182,193);
+}
+#blog-calendar td{color:#bababa;}
+.CalNextPrev{padding:0 0.7em;}
+td.CalOtherMonthDay{
+  color:#555 !important;
+}
+th.CalDayHeader{
+  padding:0.5em 0;
+  color:rgb(135, 206, 250);
+}
+#profile_block{
+padding-left:0.5em;
+}
+#sidebar-cus{
+padding-left:0.5em;
+text-align:center;
+}
+#cus-avatar{
+display:inline-block;
+background-image:url("//pic.cnitblog.com/avatar/644777/20140624152856.png");
+height:140px;
+width:140px;
+background-size:140px 140px;
+border-radius:70px;
+box-shadow:inset 0 0 10px black,0 0 3px #A3A2BB;
+}
+/*main area*/
+#main{
+background:transparent !important;
+min-height:140em;
+margin-right:280px;
+padding-left:1em;
+}
+#cnblogs_post_body{
+margin-bottom:0;
+background-image: url('//images.cnblogs.com/cnblogs_com/frantic1048/619148/o_senri.png');
+min-height: 850px;
+background-repeat: no-repeat;
+background-position: right bottom;
+box-shadow: 10px 0px 15px rgb(221, 221, 221) inset;
+}
+.post{
+  padding-left:10px;
+}
+.post:nth-of-type(4n+1){
+  border-left:10px solid rgb(72,209,204);
+}
+.post:nth-of-type(4n+2){
+  border-left:10px solid rgb(255,182,193);
+}
+.post:nth-of-type(4n+3){
+  border-left:10px solid rgb(144,238,144);
+}
+.post:nth-of-type(4n){
+  border-left:10px solid rgb(238,232,170);
+}
+.c_b_p_desc_readmore{
+  display:none;
+  text-align:center;
+}
+.post>h2:first-child{
+  display:block;
+}
+.post>h2:first-child>a{
+  position: relative;
+  display:inline-block;
+  color:black;
+  font-weight:bold;
+  font-size:24px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.post>h2:first-child>a:hover{
+  background:black;
+  border-radius:0;
+  box-shadow:2px 0 1px black;
+  border-color:transparent !important;
+}
+.post>h2:first-child>a::after{
+  display:inline-block;
+  position: absolute;
+  /*right:-1.4em;
+   *  top:-0.1em;*/
+  left:100%;
+  top:-2px;
+  width:0.5em;
+  height: 100%;
+  padding:  0 5px;
+  content:"\200B";
+  opacity:0;
+  transition:all ease 0.3s;
+  /*border-width:0.7em;
+   *  border-style:solid;
+   *  border-color: transparent transparent transparent black;*/
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiCiAgICBiYXNlUHJvZmlsZT0iZnVsbCIKICAgIHdpZHRoPSI0NSIgaGVpZ2h0PSIxMDAiCiAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGlkPSJzdmctbGluay1iYWNrZ3JvdW5kIiBkPSJNMCAwIEw0MCAwIEw1IDUwIEw0MCAxMDAgTDAgMTAwIFoiIHN0cm9rZT0iYmxhY2siIGZpbGw9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAiIGZpbGwtb3BhY2l0eT0iMSIvPgo8L3N2Zz4K);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  border-top:2px solid transparent;
+  border-bottom:2px solid transparent;
+}
+.post>h2:first-child>a:hover::after{opacity:1;}
+#main a,.topicListFooter a,#footer a{
+color:black;
+border-bottom:2px solid #777;
+border-top:2px solid transparent;
+}
+.c_b_p_desc{font-size:1.4em;}
+.desc_img{
+  float: left;
+  height: 120px;
+  margin:0 15px 10px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.9);
+  opacity: 0.8;
+  transition:opacity ease 0.3s;
+}
+.post:hover .desc_img{
+  opacity: 1;
+}
+#cnblogs_post_body>h1{
+margin-top: 1.5em;
+}
+.cnblogs_code{
+  background:transparent;
+  margin:0;
+  padding:1em 0;
+  border:none;
+}
+.cnblogs_code div{
+  background-color:transparent;
+}
+
+.cnblogs_code_toolbar a:hover,
+.cnblogs_code_toolbar a:link,
+.cnblogs_code_toolbar a:visited,
+.cnblogs_code_toolbar a:active,
+.cnblogs_code_toolbar a:link img,
+.cnblogs_code_toolbar a:visited img{
+  background-color:transparent !important;
+  padding:0;
+}
+
+
+/*post info area*/
+#blog_post_info_block{
+margin-top:0;
+padding:1em;
+}
+#green_channel{border:none;width:auto;color:transparent;text-align:center;padding:3em 0;}
+#green_channel>a{
+display:inline-block;
+line-height:31px;
+width:7em;
+padding:0 1em;
+border-radius:0 !important;
+box-shadow:inset 1px 1px 1px #fff;
+transform:skewX(-15deg);
+-webkit-transform:skewX(-15deg);
+}
+#green_channel>a:hover{box-shadow:inset -1px -1px 1px #fff;}
+#green_channel_digg{background:rgb(135,206,250) !important;}
+#green_channel_follow{background:rgb(255,182,193) !important;}
+#green_channel_favorite{background:rgb(144,238,144) !important;}
+#green_channel_contact{background:rgb(238,232,170) !important;}
+#green_channel_weibo{background:rgb(234, 179, 143) !important;}
+#digg_block{
+display:block;
+overflow:hidden;
+padding:1em 0;
+margin-top:-7em;
+}
+#author_profile{
+position:relative;
+display:inline-block;
+height:80px;
+width:15em;
+margin: -7em 0 0 0;
+text-align:right;
+}
+#div_digg{
+display:inline-block;
+margin: -7em 0 0 0;
+}
+#div_digg>.diggit,#div_digg>.buryit{
+box-shadow:inset 1px 1px 2px white,1px 1px 1px #aaa;
+transition:box-shadow ease 0.3s;
+}
+#div_digg>.diggit:hover,#div_digg>.buryit:hover{
+box-shadow:inset 1px 1px 2px #aaa,1px 1px 2px white;
+}
+#div_digg>.diggit{background:rgb(135,206,250);}
+#div_digg>.diggit:after{display:block;content:"GJ";}
+#div_digg>.buryit{background:#aaa;}
+#div_digg>.buryit:after{display:block;content:"WTF";}
+#author_profile_info>a:hover{padding:0;height:0;}
+.author_avatar{
+  position:absolute;
+  padding:0;
+  left:20px;
+  top:40px;
+  margin-top:-24px;
+  border-radius:10%;
+  box-shadow:1px 1px 1px black;
+}
+#author_profile_detail{
+position:absolute;
+right:0;
+text-align:right;
+}
+#author_profile_follow{
+position:absolute;
+top:56px;
+right:0;
+}
+.p_n_p_prefix{display: none;}
+/*comment area*/
+#tbCommentBody{
+max-width:100%;
+min-width:100%;
+min-height:20em;
+padding:5px;
+border:none;
+background:url("//images.cnblogs.com/cnblogs_com/frantic1048/619148/o_kawai_mao.png") right bottom no-repeat;
+background-color:#4a4a4a;
+}
+#tbCommentBody:hover{
+box-shadow:inset 0 0 5px rgb(238,232,170),0 0 5px rgb(238,232,170);
+background-color:#666;
+}
+#tbCommentBody:focus{
+box-shadow:inset 0 0 5px rgb(238,232,170),0 0 5px rgb(238,232,170);
+background-color:#333;
+}
+#commentbox_opt>a{float:right;}
+#comments>h4>a{border-color:transparent;}
+/*foot area*/
+#footer{
+padding-top:1em;
+text-align:center;
+line-height:1.5em;
+border-top:5px solid rgb(135,206,250);
+}
